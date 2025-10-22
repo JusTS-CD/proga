@@ -12,4 +12,4 @@ int main() {
 
     printf("%f\n", sum / 10);
     return 0;
-}
+} 
