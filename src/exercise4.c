@@ -2,21 +2,32 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-     
     float a[10];
-    float x = atof(argv[11]);
-    int k = atoi(argv[12]);
+    float x;
+    int k, i;
 
-    for (int i = 0; i < 10; i++) {
-        a[i] = atof(argv[i + 1]);
+    if (argc != 3) {
+        printf("Usage: ./exercise4 X K\n");
+        return 1;
     }
-    
-    for (int i = 9; i > k; i--) {
+
+    x = atof(argv[1]);
+    k = atoi(argv[2]);
+
+    for (i = 0; i < 10; i++) {
+        scanf("%f", &a[i]);
+    }
+
+    for (i = 9; i > k; i--) {
         a[i] = a[i - 1];
     }
     a[k] = x;
 
-    for (int i = 0; i < 10; i++) {
-        printf("%f ", a[i]);
+    for (i = 0; i < 10; i++) {
+        printf("%.0f", a[i]);
+        if (i < 9) printf(" ");
     }
+    printf("\n");
+
+    return 0;
 }
