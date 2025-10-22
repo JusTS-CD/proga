@@ -9,7 +9,7 @@ int main() {
     }
 
     for (i = 9; i >= 0; i--) {
-        printf("%.0f", a[i]);
+        printf("%f", a[i]);
         if (i > 0) printf(" ");
     }
     printf("\n");
