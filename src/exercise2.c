@@ -1,6 +1,18 @@
 #include <stdio.h>
 
-int main(int argc, char** argv) {
-    printf("Hello World!");
+int main() {
+    float a[10];
+    int i;
+
+    for (i = 0; i < 10; i++) {
+        scanf("%f", &a[i]);
+    }
+
+    for (i = 9; i >= 0; i--) {
+        printf("%.0f", a[i]);
+        if (i > 0) printf(" ");
+    }
+    printf("\n");
+
     return 0;
 }
